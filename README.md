@@ -9,7 +9,7 @@
 1. https://cdm.link/2009/07/ableton-live-midi-remote-scripting-how-to-custom-korg-nanoseries-control/
 2. https://drolez.com/blog/music/arturia-keylab-ableton-setup.php
 
-This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it automaps its faders to the device currently selected in Ableton Live with the infamous Blue Hand. This allows for what I'm calling "dynamic device control" in which the same 8 knobs on your controller can be contextually mapped to any number of different parameters within individual Live devices. This tutorial is specifically done for the Arturia KeyLab Essential 61 controller, but the general setup should apply to other controllers, and I would assume that it applies directly to the Arturia KeyLab MkII. 
+This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it automaps its faders to the device currently selected in Ableton Live with the infamous Blue Hand. This allows for what I'm calling "contextual track control" in which the same 8 knobs on your controller can be contextually mapped to any number of different parameters within individual Live devices. This tutorial is specifically done for the Arturia KeyLab Essential 61 controller, but the general setup should apply to other controllers, and I would assume that it applies directly to the Arturia KeyLab MkII. 
 
 ## Background
 
