@@ -1,4 +1,4 @@
-# Dynamic Device Control in Ableton Live (The Blue Hand) Using Arturia Keylab
+# Contextual Track Control in Ableton Live (Via The Blue Hand) Using Arturia Keylab Essential 
 
 <b>*Note: I am in the early stages of creating this article, so it is missing quite a bit of information. I plan on updating it soon. Feel free to contact me.</b>
 
