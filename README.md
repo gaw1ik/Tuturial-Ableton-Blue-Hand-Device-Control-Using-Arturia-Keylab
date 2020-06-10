@@ -26,16 +26,23 @@ It is possible to achieve this, and this tutorial will show you how, but it is k
 
 ## Outline
 1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
-2. Edit and Add the UserConfiguration Text File To Your User Remote Scripts Directory
+2. Set up the Control Surface Configuration via the UserConfiguration Text File
 3. Set up The MIDI Preferences in Ableton Live 
 
-## Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
+## 1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
 The Arturia KeyLab controller itself needs to be set up so that it will send the right communications to Ableton Live.
 
-## Edit and Add the UserConfiguration Text File To Your New Directory
-Ableton provides something called a UserConfiguration text file which when edited allow for limited customization of how a controller interacts with Live. It's actually quite limited in that it only allows you to achieve a handful of different things, but the things it lets you do are fairly powerful. One of these things happens to be the ability to autoassign 8 encoders to function as "Device Controls" which essentially means that 8 encoders will automatically map to the first 8 parameters in whatever device is currently selected by the Blue Hand in Live.
+## 2. Set up the Control Surface Configuration via the UserConfiguration Text File
+Ableton provides something called a UserConfiguration text file which when edited allows for limited customization of how a controller interacts with Live. It's actually quite limited in that it only allows you to achieve a handful of different things, but the things it lets you do are fairly powerful. One of these things happens to be the ability to autoassign 8 encoders to function as "Device Controls" which essentially means that 8 encoders will automatically map to the first 8 parameters in whatever device is currently selected by the Blue Hand in Live. 
 
-## Set up The MIDI Preferences in Ableton Live 
+<b>*Note: Please don't overwrite the default UserConfiguration.txt file. We will be creating a new one.</b>
+
+### Find the hidden Ableton folder 
+Search for %AppData% in Windows file explorer. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "C:\Users\Brian\AppData\Roaming\Ableton\Live 10.1.14\Preferences\User Remote Scripts". 
+### Create a new directory and add the UserConfiguration.txt file
+Create a new folder here (I called mine "MyKeyLab"). Inside of this folder past a copy of the UserConfiguration.txt file I've included in the files above. Alternatively, you can copy the default UserConfiguration.txt file provided by Ableton from the Remote Scripts folder, paste it in to the MyKeyLab folder, and edit it according to your own custom needs.
+
+## 3. Set up The MIDI Preferences in Ableton Live 
 I'll eventually add some pictures here, but this table shows the Control Surface/Input/Ouput configuration that worked for my setup.
 
 |                 | Control Surface        | Input                                  | Output                                  |
