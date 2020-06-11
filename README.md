@@ -37,25 +37,31 @@ The Arturia KeyLab controller itself needs to be set up so that it will send the
 ### 2. Set up a folder for the custom Control Surface
 
 #### Navigate to the hidden Ableton folder 
-First we need to navigate to the correct folder on your computer. This folder is actually hidden by default. In order to find it, search for %AppData% in the Windows file explorer. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "...\Preferences\User Remote Scripts".
+First we need to navigate to the correct folder on your computer. This folder is actually hidden by default. In order to find it, search for it directly by typing %AppData% in the Windows file explorer as shown in the picture below. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "...\Preferences\User Remote Scripts".
 
 <p float="left">
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture1.png" width="49%"/>
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture2.png" width="49%"/>
 </p>
 
-Notice the files in this folder called UserConfiguration.txt and InstantMappings-HowTo.txt. The UserConfiguration file is a template for the configuration we will create and the HowTo explains how to use it, although frankly I had to make use of online tutorials to really figure out the bigger picture and actually make this work. 
+Notice the files in this folder called UserConfiguration.txt and InstantMappings-HowTo.txt. The UserConfiguration file is a template for the Instant Mappings we will create and the HowTo explains how to use it, although frankly I had to make use of online tutorials to really figure out the bigger picture and actually make this work. 
+
+#### Create a new directory and add the UserConfiguration.txt file
+Create a new folder in the "...\User Remote Scripts" directory (I called mine "MyKeyLab"). <i>Do not start the folder name with either an underscore or a period. That will mess things up.</i> 
+
+In the new "MyKeyLab" directory, add the UserConfiguration.txt file included in the files above. We'll talk more about the details within this file later. <i>Make absolutely sure that the file keeps the same name "UserConfiguration.txt". If this name is off by any amount it will mess things up.</i>
+
+<b>*Note: Please don't overwrite the original UserConfiguration.txt file.</b>
 
 <p float="left">
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture3.png" width="49%"/>
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture4.png" width="49%"/>
 </p>
 
-#### Create a new directory
-Create a new folder in the "...\User Remote Scripts" directory (I called mine "MyKeyLab"). <i>Do not start the folder name with either an underscore or a period. That will screw things up.</i> 
+<i>I'm sorry that these images might be hard to read! You can click on them for a larger view.</i>
 
-### 3. Set up The MIDI Preferences in Ableton Live to use the new control surface
-Now that our custom instant mappings are configured, we need to go into Live and set up the MIDI preferences so it will actually utilize MyKeyLab as a control surface. I'll eventually add some pictures here, but this table shows the Control Surface/Input/Ouput configuration that worked for my setup with the Arturia KeyLab Essential 61. Notice how in the cells corresponding to the "MyKeyLab" row I have chosen "Arturia KeyLab Essential 61" for the Input and Output. Confusingly, there were two options in the dropdown menu, one of which being "Arturia KeyLab Essential 61 (Port 2)". I'm honestly not sure what the difference is. You'll notice in row 2, I simply choose the default "KeyLab Essential" as the Control Surface and pick "Arturia KeyLab Essential 61 (Port 2)" for the Input and Output. I think the default "KeyLab Essential" still needs to be present as a Control Surface in addition to the custom "MyKeyLab" Control Surface so that the transport controls (e.g. play, stop, and record) will still function. I don't think those work with only "MyKeyLab" present. I might be wrong about that. Not sure... I'm also not sure what the deal is with the whole (Port 2) thing. Nonetheless, I have something working, so some of this must be correct, even if I'm lacking complete understanding.
+### 3. Set up The Link/MIDI Preferences in Ableton Live
+Now that the directory is set up and the UserConfiguration.txt file is in it, we need to go into Live and set up the Link/MIDI preferences so it will actually utilize MyKeyLab as a control surface. I'll eventually add some pictures here, but this table shows the Control Surface/Input/Ouput configuration that worked for my setup with the Arturia KeyLab Essential 61. Notice how in the cells corresponding to the "MyKeyLab" row I have chosen "Arturia KeyLab Essential 61" for the Input and Output. Confusingly, there were two options in the dropdown menu, one of which being "Arturia KeyLab Essential 61 (Port 2)". I'm honestly not sure what the difference is. You'll notice in row 2, I simply choose the default "KeyLab Essential" as the Control Surface and pick "Arturia KeyLab Essential 61 (Port 2)" for the Input and Output. I think the default "KeyLab Essential" still needs to be present as a Control Surface in addition to the custom "MyKeyLab" Control Surface so that the transport controls (e.g. play, stop, and record) will still function. I don't think those work with only "MyKeyLab" present. I might be wrong about that. Not sure... I'm also not sure what the deal is with the whole (Port 2) thing. Nonetheless, I have something working, so some of this must be correct, even if I'm lacking complete understanding.
 
 |                 | Control Surface        | Input                                  | Output                                  |
 |:--------------- |:----------------------:|:--------------------------------------:|:---------------------------------------:|
@@ -63,14 +69,17 @@ Now that our custom instant mappings are configured, we need to go into Live and
 | 2               |     KeyLab Essential   | Arturia KeyLab Essential 61 (Port 2)   | Arturia KeyLab Essential 61 (Port 2)    |
 
 
-### 4. Add the UserConfiguration.txt file to the "MyKeyLab" Directory
-Now go back to the folder you created ".../User Remote Scripts/MyKeyLab" and inside of this folder paste a copy of the UserConfiguration.txt file I've included in the files above (sorry, not included yet). Alternatively, you can copy the default UserConfiguration.txt file provided by Ableton from the "...\Remote Scripts" folder, paste it in to the "MyKeyLab" folder, and edit it according to your own custom needs. <i>Whatever you do, make absolutely sure that the file keeps the same name "UserConfiguration.txt". If this name is off by any amount it will mess things up.</i>
+## Deeper Info
+You may be using a different controller or you may just want to do things yourself. If you want to edit the UserConfiguration.txt file yourself, you can copy the default UserConfiguration.txt file provided by Ableton from the "...\Remote Scripts" folder, paste it in to the "MyKeyLab" folder (which you can name anything), and edit it according to your own custom needs. The main thing I edited in this file was the section called "[DeviceControls]". Here I've edited the CC's and channel numbers to correspond to those on the Arturia controller. For instance, the left-most encoder on the Arturia has CC of 74 and, if you recall, we set it up such that its MIDI channel would be 2. Now, note that in the UserConfiguration.txt file the MIDI channel numbers start at 0, so I actually entered values of 1 for the encoder channel number to get it to listen to channel 2. That's definitely another place where you could mess up.
 
-<b>*Note: Please don't overwrite the original UserConfiguration.txt file.</b>
+<p float="left">
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture5.png" width="49%"/>
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture6.png" width="49%"/>
+</p>
 
-This should work now when you restart Live. 
+Another thing to point out is that in the UserConfiguration.txt file it's crucial to get the InputName and OutputName <i>exactly</i> correct. Sensing a theme here? I struggled for hours trying to get this thing to work, and one of my mistakes was not using the correct names here. These names will be unique for every different controller, but as far as I can tell, it's always just the name that you pick from the dropdown menu for Input and Output in the Link/MIDI preferences in Live corresponding to the row in which you selected the control surface. In this case, it's row 1 and the InputName and OutputName should both be "Arturia KeyLab Essential 61" just as they appear in the dropdown menus.
 
-One thing to point out is that in the UserConfiguration.txt file it's crucial to get the InputName and OutputName <i>exactly</i> correct. Sensing a theme here? I struggled for hours trying to get this thing to work, and one of my mistakes was not using the correct names here. These names will be unique for every different controller, but as far as I can tell, it's always just the name that you pick from the dropdown menu for Input and Output in the MIDI preferences in Live corresponding to the row in which you selected the control surface. In this case, it's row 1 and the InputName and OutputName should both be "Arturia KeyLab Essential 61" just as they appear in the dropdown menus.
+
 
 
 
