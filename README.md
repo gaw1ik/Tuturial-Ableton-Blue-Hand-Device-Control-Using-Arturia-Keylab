@@ -29,12 +29,8 @@ somehow dynamically or automatically map controls to different parameters based 
 
 It is possible to achieve this, and this tutorial will show you how, but it is kind of a hack up. Because of how critical this functionality is (in my opinion) and given the fact that many controllers by various manufacturers claim to provide "DAW control", you would expect it to just be there, but it's not. That bothers me quite a bit, and for a long time I have felt that this capability would make a night and day difference in my own production process, so I've been missing it quite a bit. I guess I have become frustrated enough to find a solution, and I am at least gratueful that there's a hack up available.
 
-## Outline
-1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
-2. Set up the Control Surface Configuration via the UserConfiguration Text File
-3. Set up The MIDI Preferences in Ableton Live 
-
 ## Instructions:
+
 ### 1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
 The Arturia KeyLab controller itself needs to be set up so that it will send the right communications to Ableton Live. This is done in Arturia's software "MIDI Control Center" which I was able to download using the instructions included in the box of my controller. Basically one needs to edit a User map and store that on the KeyLab controller. You'll want to store this on one of the available user maps. Let's just use User_1.
 
