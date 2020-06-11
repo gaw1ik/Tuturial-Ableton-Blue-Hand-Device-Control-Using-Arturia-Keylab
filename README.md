@@ -39,7 +39,17 @@ The Arturia KeyLab controller itself needs to be set up so that it will send the
 #### Navigate to the hidden Ableton folder 
 First we need to navigate to the correct folder on your computer. This folder is actually hidden by default. In order to find it, search for %AppData% in the Windows file explorer. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "...\Preferences\User Remote Scripts".
 
+<p float="left">
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial Images/Picture 1.png" width="30%"/>
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial Images/Picture 2.png" width="30%"/>
+</p>
+
 Notice the files in this folder called UserConfiguration.txt and InstantMappings-HowTo.txt. The UserConfiguration file is a template for the configuration we will create and the HowTo explains how to use it, although frankly I had to make use of online tutorials to really figure out the bigger picture and actually make this work. 
+
+<p float="left">
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial Images/Picture 3.png" width="30%"/>
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial Images/Picture 4.png" width="30%"/>
+</p>
 
 #### Create a new directory
 Create a new folder in the "...\User Remote Scripts" directory (I called mine "MyKeyLab"). <i>Do not start the folder name with either an underscore or a period. That will screw things up.</i> 
