@@ -4,12 +4,17 @@
 
 ## Introduction
 
+### References I found helpful
 <i>First of all, I want to draw attention to a couple other articles by other invidiuals on the internet regarding this exact or very similar topic which I have linked to below. These articles were very helpful and instrumental in helping me get my system set up, but I felt like a different take on it could be helpful to have out there. Thus, I am writing this.</i>
 
 1. https://cdm.link/2009/07/ableton-live-midi-remote-scripting-how-to-custom-korg-nanoseries-control/
 2. https://drolez.com/blog/music/arturia-keylab-ableton-setup.php
 
-This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it automaps its faders to the device currently selected in Ableton Live with the infamous Blue Hand. This allows for what I'm calling "contextual track control" in which the same 8 knobs on your controller can be contextually mapped to any number of different parameters within individual Live devices. This tutorial is specifically done for the Arturia KeyLab Essential 61 controller, but the general setup should apply to other controllers, and I would assume that it applies directly to the Arturia KeyLab MkII. 
+### Scope
+This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it automaps its faders to the device currently selected in Ableton Live with the infamous Blue Hand. This allows for what I'm calling "contextual track control" in which the same 8 knobs on your controller can be contextually mapped to unique parameters within individual Live devices. This tutorial is specifically done for the Arturia KeyLab Essential 61 controller, but the general setup should apply to other controllers as well, and I would assume that it applies directly to the Arturia KeyLab MkII. 
+
+### How does this work?
+Ableton provides something called a UserConfiguration text file which when edited allows for customization of so-called "Instant Mappings" which basically governs how a controller interacts with Live. It's actually quite limited in that it only allows you to achieve a handful of different things, but the things it lets you do are fairly powerful. One of these things happens to be the ability to autoassign 8 encoders to function as "Device Controls" which essentially means that 8 encoders from any controller can be setup to automatically map to the first 8 parameters in whatever device is currently selected by the Blue Hand in Live. That's essential to what we are trying to achieve here, and without Ableton providing this little bit of configurability we wouldn't be able to do this. I think there might be another way using python scripts, but that is surely much more complicated, so it's nice that we can avoid it and just make use of this simple text file.
 
 ## Background and Rant
 
@@ -29,22 +34,20 @@ It is possible to achieve this, and this tutorial will show you how, but it is k
 2. Set up the Control Surface Configuration via the UserConfiguration Text File
 3. Set up The MIDI Preferences in Ableton Live 
 
-## 1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
+## Instructions:
+### 1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
 The Arturia KeyLab controller itself needs to be set up so that it will send the right communications to Ableton Live. This is done in Arturia's software "MIDI Control Center" which I was able to download using the instructions included in the box of my controller. Basically one needs to edit a User map and store that on the KeyLab controller. You'll want to store this on one of the available user maps. Let's just use User_1.
 
-## 2. Set up the Control Surface Configuration via the UserConfiguration Text File
-Ableton provides something called a UserConfiguration text file which when edited allows for customization of how a controller interacts with Live. It's actually quite limited in that it only allows you to achieve a handful of different things, but the things it lets you do are fairly powerful. One of these things happens to be the ability to autoassign 8 encoders to function as "Device Controls" which essentially means that 8 encoders will automatically map to the first 8 parameters in whatever device is currently selected by the Blue Hand in Live. That's essential to what we are trying to achieve, and without Ableton providing this little bit of configurability we wouldn't be able to do this. I think there might be another way using python scripts, but that is surely much more complicated, so it's nice that we can avoid it and just make use of this simple text file.
+### 2. Set up a folder for the custom Control Surface
 
-<b>*Note: Please don't overwrite the default UserConfiguration.txt file. We will be creating a new one.</b>
-
-### Navigate to the hidden Ableton folder 
+#### Navigate to the hidden Ableton folder 
 First we need to navigate to the correct folder on your computer. This folder is actually hidden by default. In order to find it, search for %AppData% in the Windows file explorer. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "...\Preferences\User Remote Scripts".
-### Create a new directory and add the UserConfiguration.txt file
+#### Create a new directory
 Notice the files in this folder called UserConfiguration.txt and InstantMappings-HowTo.txt. The UserConfiguration file is a template for the configuration we will create and the HowTo explains how to use it, although frankly I had to make use of online tutorials to really figure out the bigger picture and actually make this work. 
 
 Create a new folder in the "...\User Remote Scripts" directory (I called mine "MyKeyLab"). <i>Do not start the folder name with either an underscore or a period. That will screw things up.</i> 
 
-## 3. Set up The MIDI Preferences in Ableton Live 
+### 3. Set up The MIDI Preferences in Ableton Live to use the new control surface
 Now that our custom instant mappings are configured, we need to go into Live and set up the MIDI preferences so it will actually utilize MyKeyLab as a control surface. I'll eventually add some pictures here, but this table shows the Control Surface/Input/Ouput configuration that worked for my setup with the Arturia KeyLab Essential 61. Notice how in the cells corresponding to the "MyKeyLab" row I have chosen "Arturia KeyLab Essential 61" to correspond with what the InputName and OutputName we defined in the UserConfiguration.txt file. Confusingly, there were two options in the dropdown menu, one of which being "Arturia KeyLab Essential 61 (Port 2)". I'm honestly not sure what the difference is. You'll notice in row 2, I simply choose the default KeyLab Essential as the Control Surface and pick "Arturia KeyLab Essential 61 (Port 2)" for the Input and Output. I think the default KeyLab Essential still needs to be present in addition to the custom "MyKeyLab" Control Surface so that the transport controls like play, stop, and record will still function. I don't think those work with only "MyKeyLab" present. I might be wrong about that. Not sure... I'm also not sure what the deal is with the whole (Port 2) thing. Nonetheless, I have something working, so some of this must be correct, even if I'm lacking complete understanding.
 
 |                 | Control Surface        | Input                                  | Output                                  |
@@ -52,7 +55,11 @@ Now that our custom instant mappings are configured, we need to go into Live and
 | 1               |     MyKeyLab           | Arturia KeyLab Essential 61            | Arturia KeyLab Essential 61             |
 | 2               |     KeyLab Essential   | Arturia KeyLab Essential 61 (Port 2)   | Arturia KeyLab Essential 61 (Port 2)    |
 
+
+#### Add the UserConfiguration.txt file
 Now go back to the folder you created ".../User Remote Scripts/MyKeyLab" and inside of this folder paste a copy of the UserConfiguration.txt file I've included in the files above (sorry, not included yet). Alternatively, you can copy the default UserConfiguration.txt file provided by Ableton from the "...\Remote Scripts" folder, paste it in to the "MyKeyLab" folder, and edit it according to your own custom needs. <i>Whatever you do, make absolutely sure that the file keeps the same name "UserConfiguration.txt". If this name is off by any amount it will mess things up.</i>
+
+<b>*Note: Please don't overwrite the original UserConfiguration.txt file.</b>
 
 This should work now when you restart Live. 
 
