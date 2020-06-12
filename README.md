@@ -42,7 +42,9 @@ The Arturia KeyLab controller itself needs to be set up so that it will send the
 ### 2. Set up a folder for the custom Control Surface
 
 #### Navigate to the hidden Ableton folder 
-First we need to navigate to the correct folder on your computer. This folder is actually hidden by default. In order to find it, search for it directly by typing %AppData% in the Windows file explorer as shown in the picture below. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "...\Preferences\User Remote Scripts".
+First we need to navigate to the correct folder on your computer. This folder is actually hidden by default in Windows. In order to find it, search for it directly by typing %AppData% in the Windows file explorer as shown in the picture below. This will take you to the hidden AppData folder in which you should find a folder for Ableton. Inside of the Ableton folder navigate to "Live XX.X.XX\Preferences\User Remote Scripts" in which the XX.X.XX is your specific version number of Live that you are using. If you aren't sure you can click on the Help tab in Live and you should see the version number on the thing that pops up. In my case, I'm using Live 10.1.14. 
+
+> Hmmm. I wonder if I'll have to go through this process again every time Live is updated to a new version. Seems likely.
 
 <p float="left">
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture1.png" width="49%"/>
