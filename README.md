@@ -56,9 +56,9 @@ Notice the files in this folder called UserConfiguration.txt and InstantMappings
 #### Create a new directory and add the UserConfiguration.txt file
 Create a new folder in the "...\User Remote Scripts" directory (I called mine "MyKeyLab"). <i>Do not start the folder name with either an underscore or a period. That will mess things up.</i> 
 
-In the new "MyKeyLab" directory, add the UserConfiguration.txt file included in the files above. We'll talk more about the details within this file later. <i>Make absolutely sure that the file keeps the same name "UserConfiguration.txt". If this name is off by any amount it will mess things up.</i>
+In the new "MyKeyLab" directory, add the UserConfiguration.txt file included in the files above. We'll talk more about the details within this file later. For now, just understand that I've made a few small changes in this file to let Live know certain things about the controller - namely the CC values of the encoders and the fact that they are communicating over MIDI Channel 2 as we set it up before, and the input and output name of the controller. More on this later. 
 
-<b>*Note: Please don't overwrite the original UserConfiguration.txt file.</b>
+<b>*Note: Make absolutely sure that the file keeps the same name "UserConfiguration.txt". If this name is off by any amount it will mess things up. Also, don't overwrite or move the original UserConfiguration.txt file.</b>
 
 <p float="left">
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Picture3.png" width="49%"/>
