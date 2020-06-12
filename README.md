@@ -1,4 +1,4 @@
-# Contextual Track Control in Ableton Live (Via The Blue Hand) Using Arturia Keylab Essential 
+# Device Control in Ableton Live (Via The Blue Hand) Using Arturia Keylab Essential 
 
 <b>*Note: I am in the early stages of creating this article, so it is missing quite a bit of information. I plan on updating it soon. Feel free to contact me.</b>
 
@@ -33,7 +33,11 @@ It is possible to achieve this, and this tutorial will show you how, but it is k
 ## Instructions:
 
 ### 1. Set up the Arturia MIDI Controller in Arturia's MIDI Control Center 
-The Arturia KeyLab controller itself needs to be set up so that it will send the right communications to Ableton Live. This is done in Arturia's software "MIDI Control Center" which I was able to download using the instructions included in the box of my controller. Basically one needs to edit a User map and store that on the KeyLab controller. You'll want to store this on one of the available user maps. Let's just use User_1.
+The Arturia KeyLab controller itself needs to be set up so that it will send the right communications to Ableton Live. This is done in Arturia's software "MIDI Control Center" which I was able to download using the instructions included in the box of my controller. Open the MIDI Control Center software with your controller connected to your computer via USB. In the software, make sure you have the KeyLab Essential controller selected in "Device" at the top left. Then, under "Local Templates" add a user template like the one I've shown which I called "User_1". In the "User_1" template, edit the channel that the 8 encoders are communicating over by selecting each encoder one at a time and changing the "Channel" setting to 2. Once this is done, highlight "User_1" that you just created and also highlight "User 1" from the "Device Memories" section and then click the "Store To" button. This should download the "User_1" template you just created to the controller. Now, when you twiddle those encoders they will send info to Live over MIDI Channel 2. This is important, because Live needs to understand where the communications are coming from.
+
+<p float="center">
+  <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/MIDI_Control_Center_1.png" width="80%"/>
+</p>
 
 ### 2. Set up a folder for the custom Control Surface
 
