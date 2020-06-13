@@ -98,7 +98,7 @@ Many controllers - including the KeyLab - have track selection control buttons, 
 
 Cool concept, although in practice the KeyLab Essential's track switching buttons stop functioning when I am in the User map mode putting a swift end to my hopes and dreams. They only seem to work in the DAW map mode, and while I cannot really think of a good reason why this would be the case, it does seem to be an unfixable issue. It's still possible to jump into DAW mode when you want to switch tracks, but in my opinion, that's just too many button presses for such an essential function (no Arturia pun intended). For now, I will still be selecting tracks with mouse or keyboard arrow keys :(
 
-## More Info
+## Re: Different Controllers
 You may be using a different controller or you may just want to do things yourself. If you want to edit the UserConfiguration.txt file yourself, you can copy the default UserConfiguration.txt file provided by Ableton from the "...\Remote Scripts" folder, paste it in to the "MyKeyLab" folder (which you can name anything), and edit it according to your own custom needs. The main thing I edited in this file was the section called "[DeviceControls]". Here I've edited the CC's and channel numbers to correspond to those on the Arturia controller. For instance, the left-most encoder on the Arturia has CC of 74 and, if you recall, we set it up such that its MIDI channel would be 2. Note that in the UserConfiguration.txt file the MIDI channel numbers start at 0, so I actually entered values of 1 for all of the "EncoderChannel" numbers, which in this context means channel 2. That's definitely another place where you could mess up.
 
 <p float="left">
