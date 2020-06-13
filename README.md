@@ -1,24 +1,22 @@
 # Device Control in Ableton Live (Via The Blue Hand) Using Arturia Keylab Essential 
+This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it achieves device control in Ableton Live in which encoders automap to the device currently selected with the infamous Blue Hand.
 
-<p float="center">
+<p style="align:center">
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Capture1.JPG" width="80%"/>
 </p>
 
 <b>*Note: I am in the early stages of creating this article, so it is missing quite a bit of information. I plan on updating it soon. Feel free to contact me.</b>
 
-## Introduction
-
-### First off, some references I found helpful
+## First off, some references I found helpful
 Before we get started, I want to draw attention to a few other resources by other invidiuals on the internet regarding this exact or very similar topic which I have linked to below. These resources were very helpful and instrumental in helping me get my system set up, but I felt like a different take on it could be helpful to have out there, because each of these leaves a little bit of confusion in various areas. I'm sure my tutorial will have some confusing points as well, but I think having another take out there will be beneficial.</i>
 
 1. https://cdm.link/2009/07/ableton-live-midi-remote-scripting-how-to-custom-korg-nanoseries-control/
 2. https://drolez.com/blog/music/arturia-keylab-ableton-setup.php
 3. https://youtu.be/y-kiQMfJ3jE (Video from Sanjay C's channel on Youtube)
 
-### Scope
+## Introduction
 This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it automaps its faders to the device currently selected in Ableton Live with the infamous Blue Hand. This allows for what I'm calling "contextual track control" in which the same 8 knobs on your controller can be contextually mapped to unique parameters within individual Live devices. This tutorial is specifically done for the Arturia KeyLab Essential 61 controller, but the general setup should apply to other controllers as well, and I would assume that it applies directly to the Arturia KeyLab MkII. 
 
-### How does this work?
 Ableton provides something called a UserConfiguration text file which when edited allows for customization of so-called "Instant Mappings" which basically governs how a controller interacts with Live. It's actually quite limited in that it only allows you to achieve a handful of different things, but the things it lets you do are fairly powerful. One of these things happens to be the ability to autoassign 8 encoders to function as "Device Controls" which essentially means that 8 encoders from any controller can be setup to automatically map to the first 8 parameters in whatever device is currently selected by the Blue Hand in Live. That's essential to what we are trying to achieve here, and without Ableton providing this little bit of configurability we wouldn't be able to do this. I think there might be another way using python scripts, but that is surely much more complicated, so it's nice that we can avoid it and just make use of this simple text file.
 
 ## Background and Rant
