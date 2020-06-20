@@ -1,5 +1,5 @@
 # Device Control in Ableton Live (Via The Blue Hand) Using Arturia Keylab Essential 
-This repo documents how to set up an Arturia KeyLab Essential MIDI Controller such that it achieves device control in Ableton Live in which encoders automap to the device currently selected with the infamous Blue Hand.
+This repo is a tutorial which documents how to set up an Arturia KeyLab Essential MIDI Controller such that it achieves device control in Ableton Live in which encoders automap to the device currently selected with the infamous Blue Hand.
 
 <p style="align:center">
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Capture1.JPG" width="80%"/>
