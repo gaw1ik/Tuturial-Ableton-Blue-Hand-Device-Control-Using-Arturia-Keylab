@@ -5,8 +5,6 @@ This repo is a tutorial which documents how to set up an Arturia KeyLab Essentia
   <img src="https://github.com/gaw1ik/Ableton-Blue-Hand-Device-Control-Using-Arturia-Keylab/blob/master/Tutorial%20Images/Capture1.JPG" width="80%"/>
 </p>
 
-<b>*Note: I am in the early stages of creating this article, so it is missing quite a bit of information. I plan on updating it soon. Feel free to contact me.</b>
-
 ## First off, some references I found helpful
 Before we get started, I want to draw attention to a few other resources by other invidiuals on the internet regarding this exact or very similar topic which I have linked to below. These resources were very helpful and instrumental in helping me get my system set up, but I felt like a different take on it could be helpful to have out there, because each of these leaves a little bit of confusion in various areas. I'm sure my tutorial will have some confusing points as well, but I think having another take out there will be beneficial.</i>
 
